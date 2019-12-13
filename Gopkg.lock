@@ -119,14 +119,6 @@
   version = "v1.0.1"
 
 [[projects]]
-  digest = "1:bde6c3a610bd01ea7e2c8d9c7fd1116531fb6619f46f73f4f2ea16adb70da6be"
-  name = "github.com/operator-framework/operator-sdk"
-  packages = ["pkg/util/k8sutil"]
-  pruneopts = "NUT"
-  revision = "e5a0ab096e1a7c0e6b937d2b41707eccb82c3c77"
-  version = "v0.0.7"
-
-[[projects]]
   digest = "1:14715f705ff5dfe0ffd6571d7d201dd8e921030f8070321a79380d8ca4ec1a24"
   name = "github.com/pkg/errors"
   packages = ["."]
@@ -463,6 +455,17 @@
   revision = "69764acb6e8e900b7c05296c5d3c9c19545475f9"
 
 [[projects]]
+  digest = "1:68cd93696d4de06936c94bf0c510802140c2d3c956b557f3d001430d58cf676c"
+  name = "sigs.k8s.io/controller-runtime"
+  packages = [
+    "pkg/runtime/scheme",
+    "pkg/scheme",
+  ]
+  pruneopts = "NUT"
+  revision = "198197fe0fd7553cadd8afcd3338f8ee4b8a7e3f"
+  version = "v0.4.0"
+
+[[projects]]
   digest = "1:8730e0150dfb2b7e173890c8b9868e7a273082ef8e39f4940e3506a481cf895c"
   name = "sigs.k8s.io/yaml"
   packages = ["."]
@@ -474,7 +477,6 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/operator-framework/operator-sdk/pkg/util/k8sutil",
     "k8s.io/apimachinery/pkg/api/errors",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
     "k8s.io/apimachinery/pkg/labels",
@@ -495,6 +497,7 @@
     "k8s.io/gengo/args",
     "k8s.io/gengo/examples/defaulter-gen/generators",
     "k8s.io/gengo/generator",
+    "sigs.k8s.io/controller-runtime/pkg/runtime/scheme",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

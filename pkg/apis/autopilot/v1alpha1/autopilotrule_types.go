@@ -4,6 +4,10 @@ import (
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+func init() {
+	SchemeBuilder.Register(&AutopilotRule{}, &AutopilotRuleList{})
+}
+
 // LabelSelectorOperator is the set of operators that can be used in a selector requirement.
 type LabelSelectorOperator string
 
